@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="uz" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Graphic Designer | Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter & Syne for Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        syne: ['Syne', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            ps: '#31A8FF', // Photoshop Blue
+                            ai: '#FF9A00', // Illustrator Orange
+                            corel: '#00A859', // CorelDraw Green
+                            dark: '#0B0F19',
+                            darker: '#05070C',
+                            accent: '#8B5CF6' // Premium Purple
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Premium Glow Effects and Utilities */
+        .glow-ps:hover {
+            box-shadow: 0 0 20px rgba(49, 168, 255, 0.4);
+        }
+        .glow-ai:hover {
+            box-shadow: 0 0 20px rgba(255, 154, 0, 0.4);
+        }
+        .glow-corel:hover {
+            box-shadow: 0 0 20px rgba(0, 168, 89, 0.4);
+        }
+        .glow-accent {
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.25);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #05070C;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1F2937;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8B5CF6;
+        }
+    </style>
+</head>
+<body class="bg-brand-darker text-gray-100 font-sans selection:bg-brand-accent selection:text-white overflow-x-hidden">
+
+    <!-- HEADER & NAVIGATION -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-brand-darker/80 backdrop-blur-md border-b border-white/5 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <span class="font-syne text-2xl font-extrabold bg-gradient-to-r from-violet-500 via-fuchsia-500 to-cyan-400 bg-clip-text text-transparent group-hover:opacity-80 transition">
+                    SML.DSGN
+                </span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
+                <a href="#asosiy" class="hover:text-white transition-colors">Asosiy</a>
+                <a href="#men-haqimda" class="hover:text-white transition-colors">Men haqimda</a>
+                <a href="# portfolio" class="hover:text-white transition-colors" onclick="smoothScroll(event, '#portfolio')">Portfolio</a>
+                <a href="#xizmatlar" class="hover:text-white transition-colors">Xizmatlar</a>
+                <a href="#aloqa" class="hover:text-white transition-colors">Aloqa</a>
+            </nav>
+
+            <!-- CTA Button & Mobile Menu Toggle -->
+            <div class="flex items-center gap-4">
+                <a href="https://t.me/smldsgn_bot" class="hidden sm:inline-flex items-center justify-center px-5 py-2 text-sm font-semibold bg-white text-brand-darker rounded-full hover:bg-brand-accent hover:text-white transition-all duration-300 shadow-lg shadow-white/5 hover:shadow-brand-accent/25">
+                    Buyurtma Berish
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-400 hover:text-white focus:outline-none" aria-label="Menu">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-b border-white/5 px-6 py-4 space-y-4">
+            <a href="#asosiy" class="block text-gray-400 hover:text-white py-2 transition-colors">Asosiy</a>
+            <a href="#men-haqimda" class="block text-gray-400 hover:text-white py-2 transition-colors">Men haqimda</a>
+            <a href="#portfolio" class="block text-gray-400 hover:text-white py-2 transition-colors">Portfolio</a>
+            <a href="#xizmatlar" class="block text-gray-400 hover:text-white py-2 transition-colors">Xizmatlar</a>
+            <a href="#aloqa" class="block text-gray-400 hover:text-white py-2 transition-colors">Aloqa</a>
+            <a href="#aloqa" class="block w-full text-center py-2.5 bg-brand-accent text-white rounded-lg hover:bg-brand-accent/80 transition-all">Buyurtma Berish</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="asosiy" class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
+        <!-- Abstract Glow Backgrounds -->
+        <div class="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-violet-600/10 blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-96 h-96 rounded-full bg-cyan-500/10 blur-[120px] pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 py-12 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <!-- Text Content -->
+            <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-brand-accent uppercase tracking-wider">
+                    <span class="w-2 h-2 rounded-full bg-brand-accent animate-ping"></span>
+                    Loyihalar uchun ochiqman
+                </div>
+                
+                <h1 class="font-syne text-4xl sm:text-6xl lg:text-7xl font-extrabold leading-none tracking-tight">
+                    G'oyalaringizni <br class="hidden sm:inline">
+                    <span class="bg-gradient-to-r from-violet-400 via-pink-500 to-amber-400 bg-clip-text text-transparent">
+                        Premium San'atga
+                    </span> <br>
+                    aylantiraman.
+                </h1>
+
+                <p class="text-gray-400 text-lg max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
+                    Men Adobe Photoshop, Illustrator va CorelDraw bo'yicha professional vizual dizayner va raqamli rassomman. Sizning brendingiz uchun unutilmas va yuqori sifatli dizaynlarni yarataman.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                    <a href="#portfolio" class="w-full sm:w-auto px-8 py-4 bg-brand-accent text-white font-bold rounded-xl hover:bg-brand-accent/90 transition-all duration-300 shadow-lg shadow-brand-accent/25 hover:shadow-brand-accent/40 flex items-center justify-center gap-3 group">
+                        Mening ishlarim
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <a href="https://t.me/smldsgn_bot" class="w-full sm:w-auto px-8 py-4 bg-white/5 text-white font-bold rounded-xl hover:bg-white/10 transition-all duration-300 border border-white/10 flex items-center justify-center gap-3">
+                        Bog'lanish
+                    </a>
+                </div>
+
+                <!-- Fast Tool Badges -->
+                <div class="pt-8 border-t border-white/5 flex flex-wrap items-center justify-center lg:justify-start gap-6">
+                    <span class="text-xs text-gray-500 uppercase tracking-widest font-bold">Asosiy qurollarim:</span>
+                    <div class="flex gap-4">
+                        <span class="flex items-center gap-2 px-3 py-1 rounded-md bg-brand-ps/10 text-brand-ps font-bold text-sm border border-brand-ps/20">
+                            <i class="fa-brands fa-adobe"></i> Photoshop
+                        </span>
+                        <span class="flex items-center gap-2 px-3 py-1 rounded-md bg-brand-ai/10 text-brand-ai font-bold text-sm border border-brand-ai/20">
+                            <i class="fa-brands fa-adobe"></i> Illustrator
+                        </span>
+                        <span class="flex items-center gap-2 px-3 py-1 rounded-md bg-brand-corel/10 text-brand-corel font-bold text-sm border border-brand-corel/20">
+                            <i class="fa-solid fa-pen-nib"></i> CorelDraw
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Graphic Preview Side -->
+            <div class="lg:col-span-5 relative flex justify-center">
+                <div class="relative w-80 h-80 sm:w-[420px] sm:h-[420px] rounded-3xl bg-gradient-to-tr from-brand-accent to-pink-500 p-[1px] glow-accent transition-all duration-500 hover:scale-[1.02]">
+                    <div class="w-full h-full rounded-3xl bg-brand-dark flex flex-col justify-between p-8 relative overflow-hidden">
+                        
+                        <!-- Grid decorative background -->
+                        <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
+
+                        <!-- Card Top Info -->
+                        <div class="flex justify-between items-center z-10">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-brand-accent/20 flex items-center justify-center border border-brand-accent/30 text-brand-accent">
+                                    <i class="fa-solid fa-cube text-lg"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-sm">Premium Art Direction</h3>
+                                    <p class="text-xs text-gray-400">Grafik Dizayner</p>
+                                </div>
+                            </div>
+                            <span class="px-2.5 py-1 text-[10px] font-bold bg-green-500/10 text-green-400 rounded-full border border-green-500/20">FAOL</span>
+                        </div>
+
+                        <!-- Mid Abstract Illustration -->
+                        <div class="my-8 relative flex items-center justify-center z-10">
+                            <!-- Visual floating vectors -->
+                            <div class="w-48 h-48 rounded-full border-2 border-dashed border-white/10 flex items-center justify-center animate-spin" style="animation-duration: 20s">
+                                <div class="w-32 h-32 rounded-full border border-brand-accent/40 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full bg-brand-accent/10 flex items-center justify-center">
+                                        <i class="fa-solid fa-bezier-curve text-2xl text-brand-accent"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute top-0 right-10 bg-brand-ps w-10 h-10 rounded-lg flex items-center justify-center text-white font-extrabold shadow-lg animate-bounce" style="animation-delay: 0.5s">Ps</div>
+                            <div class="absolute bottom-4 left-6 bg-brand-ai w-10 h-10 rounded-lg flex items-center justify-center text-white font-extrabold shadow-lg animate-bounce" style="animation-delay: 1s">Ai</div>
+                            <div class="absolute bottom-12 right-2 bg-brand-corel w-10 h-10 rounded-lg flex items-center justify-center text-white font-extrabold shadow-lg animate-bounce" style="animation-delay: 1.5s">Cd</div>
+                        </div>
+
+                        <!-- Card Stats / Footer -->
+                        <div class="grid grid-cols-3 gap-2 pt-4 border-t border-white/5 text-center z-10">
+                            <div>
+                                <p class="text-[10px] text-gray-500 font-bold uppercase">Tajriba</p>
+                                <p class="text-lg font-bold text-white">5+ Yil</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-gray-500 font-bold uppercase">Loyihalar</p>
+                                <p class="text-lg font-bold text-white">350+</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-gray-500 font-bold uppercase">Mijozlar</p>
+                                <p class="text-lg font-bold text-white">98%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT & SKILLS SECTION -->
+    <section id="men-haqimda" class="py-24 bg-brand-dark/50 border-y border-white/5 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                
+                <!-- About Info -->
+                <div class="lg:col-span-5 space-y-6">
+                    <h2 class="font-syne text-3xl sm:text-5xl font-extrabold">
+                        O'z ishimning <br>
+                        <span class="text-brand-accent">ustasiman</span>
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed font-light">
+                        Salom! Men ijodiy yechimlar va brendlar vizualizatsiyasi bilan shug'ullanuvchi professional dizayner va vektor ustasiman. Mening maqsadim — shunchaki rasm chizish emas, balki dizayn orqali brendingiz g'oyasini va qiymatini xaridorga yetkazib berish.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed font-light text-sm">
+                        Men har bir loyihaga individual yondashaman, zamonaviy tendensiyalardan foydalanaman va buyurtmalarni vaqtida, premium darajada topshiraman. Poligrafiyadan tortib murakkab brending va vektorli illyustratsiyalargacha bo'lgan barcha bosqichlarda o'z xizmatlarimni taklif qilaman.
+                    </p>
+                    
+                    <div class="pt-4 flex flex-wrap gap-4">
+                        <div class="flex items-center gap-3 px-4 py-3 bg-white/5 rounded-xl border border-white/5 hover:border-brand-accent/25 transition">
+                            <i class="fa-solid fa-shield-halved text-brand-accent text-lg"></i>
+                            <span class="text-sm font-semibold">100% Sifat Kafolati</span>
+                        </div>
+                        <div class="flex items-center gap-3 px-4 py-3 bg-white/5 rounded-xl border border-white/5 hover:border-brand-accent/25 transition">
+                            <i class="fa-solid fa-clock-rotate-left text-brand-accent text-lg"></i>
+                            <span class="text-sm font-semibold">Tezkor Va To'g'ri Vaqt</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dynamic Skills Section -->
+                <div class="lg:col-span-7 space-y-8 bg-brand-dark/80 p-8 rounded-3xl border border-white/5">
+                    <div>
+                        <h3 class="text-lg font-bold mb-1">Mening professional qurollarim va ko'nikmalarim</h3>
+                        <p class="text-xs text-gray-400">Har bir dastur bo'yicha mukammal egallash darajasi</p>
+                    </div>
+
+                    <!-- Photoshop skill -->
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center gap-3">
+                                <span class="w-8 h-8 rounded-md bg-brand-ps/10 text-brand-ps flex items-center justify-center font-black border border-brand-ps/20 text-xs">Ps</span>
+                                <span class="font-semibold text-sm">Adobe Photoshop</span>
+                            </div>
+                            <span class="text-sm font-bold text-brand-ps">95%</span>
+                        </div>
+                        <div class="w-full bg-white/5 h-2.5 rounded-full overflow-hidden">
+                            <div class="bg-brand-ps h-full rounded-full w-[95%] transition-all duration-1000 shadow-[0_0_12px_rgba(49,168,255,0.4)]"></div>
+                        </div>
+                        <p class="text-xs text-gray-500">Rastrli grafikalar, foto-montaj, murakkab kollajlar, retush, ijtimoiy tarmoqlar uchun premium bannerlar tayyorlash.</p>
+                    </div>
+
+                    <!-- Illustrator skill -->
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center gap-3">
+                                <span class="w-8 h-8 rounded-md bg-brand-ai/10 text-brand-ai flex items-center justify-center font-black border border-brand-ai/20 text-xs">Ai</span>
+                                <span class="font-semibold text-sm">Adobe Illustrator</span>
+                            </div>
+                            <span class="text-sm font-bold text-brand-ai">90%</span>
+                        </div>
+                        <div class="w-full bg-white/5 h-2.5 rounded-full overflow-hidden">
+                            <div class="bg-brand-ai h-full rounded-full w-[90%] transition-all duration-1000 shadow-[0_0_12px_rgba(255,154,0,0.4)]"></div>
+                        </div>
+                        <p class="text-xs text-gray-500">Vektorli grafika, premium logotiplar yaratish, brendbuklar, unikal illyustratsiyalar, qadoq dizaynlari.</p>
+                    </div>
+
+                    <!-- CorelDraw skill -->
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center gap-3">
+                                <span class="w-8 h-8 rounded-md bg-brand-corel/10 text-brand-corel flex items-center justify-center font-black border border-brand-corel/20 text-xs">Cd</span>
+                                <span class="font-semibold text-sm">CorelDraw</span>
+                            </div>
+                            <span class="text-sm font-bold text-brand-corel">85%</span>
+                        </div>
+                        <div class="w-full bg-white/5 h-2.5 rounded-full overflow-hidden">
+                            <div class="bg-brand-corel h-full rounded-full w-[85%] transition-all duration-1000 shadow-[0_0_12px_rgba(0,168,89,0.4)]"></div>
+                        </div>
+                        <p class="text-xs text-gray-500">Katta hajmdagi tashqi reklama banerlari, poligrafiya (vizitka, flayer, buklet), kesish uchun vektor tayyorlash.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfolio" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <!-- Section Header -->
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12">
+                <div>
+                    <h2 class="font-syne text-3xl sm:text-5xl font-extrabold mb-3">Sara Loyihalarim</h2>
+                    <p class="text-gray-400">Har bir loyiha o'ziga xos vizual estetika va funksionallikka ega</p>
+                </div>
+                
+                <!-- Filter Buttons -->
+                <div class="flex flex-wrap gap-2.5 bg-brand-dark p-1.5 rounded-2xl border border-white/5">
+                    <button onclick="filterPortfolio('all')" class="filter-btn active px-5 py-2.5 text-xs font-bold rounded-xl transition-all duration-300 bg-brand-accent text-white" data-filter="all">
+                        Hammasi
+                    </button>
+                    <button onclick="filterPortfolio('ps')" class="filter-btn px-5 py-2.5 text-xs font-bold rounded-xl transition-all duration-300 text-gray-400 hover:text-white" data-filter="ps">
+                        Photoshop
+                    </button>
+                    <button onclick="filterPortfolio('ai')" class="filter-btn px-5 py-2.5 text-xs font-bold rounded-xl transition-all duration-300 text-gray-400 hover:text-white" data-filter="ai">
+                        Illustrator
+                    </button>
+                    <button onclick="filterPortfolio('corel')" class="filter-btn px-5 py-2.5 text-xs font-bold rounded-xl transition-all duration-300 text-gray-400 hover:text-white" data-filter="corel">
+                        CorelDraw
+                    </button>
+                </div>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+                
+                <!-- Portfolio Card 1 (PS) -->
+                <div class="portfolio-item ps group relative overflow-hidden rounded-3xl bg-brand-dark border border-white/5 cursor-pointer transform hover:-translate-y-2 transition-all duration-300" onclick="openDetails('cyberpunk')">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-indigo-950 to-blue-950 overflow-hidden relative flex items-center justify-center">
+                        <!-- Custom Premium Mockup SVG inside card -->
+                        <svg class="w-full h-full opacity-80 group-hover:scale-105 transition duration-500" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="400" height="300" fill="#0C101F"/>
+                            <circle cx="200" cy="150" r="80" fill="url(#ps_grad)" opacity="0.6"/>
+                            <g style="mix-blend-mode:overlay">
+                                <circle cx="180" cy="140" r="60" fill="#FF007A" opacity="0.4"/>
+                                <circle cx="230" cy="160" r="50" fill="#00E5FF" opacity="0.4"/>
+                            </g>
+                            <text x="50%" y="52%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-family="Syne" font-size="28" font-weight="bold" letter-spacing="1">CYBERPUNK WORLD</text>
+                            <defs>
+                                <radialGradient id="ps_grad" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" transform="translate(200 150) rotate(90) scale(80)">
+                                    <stop stop-color="#31A8FF"/>
+                                    <stop offset="1" stop-color="#05070C" stop-opacity="0"/>
+                                </radialGradient>
+                            </defs>
+                        </svg>
+                        <span class="absolute top-4 left-4 bg-brand-ps/20 text-brand-ps font-bold text-[10px] px-2.5 py-1 rounded-full uppercase tracking-wider border border-brand-ps/30">Photoshop</span>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-brand-accent font-bold uppercase tracking-widest">Kollaj & Manipulyatsiya</span>
+                        <h3 class="text-xl font-bold mt-1 text-white group-hover:text-brand-accent transition-colors">Cyberpunk Poster Design</h3>
+                        <p class="text-sm text-gray-400 mt-2 line-clamp-2">Murakkab kollaj, kiberpunk janridagi yuqori darajadagi rang berish va retro-futuristik yoritish effektlari.</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Card 2 (AI) -->
+                <div class="portfolio-item ai group relative overflow-hidden rounded-3xl bg-brand-dark border border-white/5 cursor-pointer transform hover:-translate-y-2 transition-all duration-300" onclick="openDetails('brand-identity')">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-amber-950 to-orange-950 overflow-hidden relative flex items-center justify-center">
+                        <!-- Custom Mockup SVG -->
+                        <svg class="w-full h-full opacity-80 group-hover:scale-105 transition duration-500" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="400" height="300" fill="#140D04"/>
+                            <path d="M120 220 L200 80 L280 220 Z" stroke="#FF9A00" stroke-width="6" stroke-linejoin="round" fill="none"/>
+                            <path d="M150 220 L200 135 L250 220" stroke="#FFF" stroke-width="3" stroke-linejoin="round" fill="none"/>
+                            <circle cx="200" cy="80" r="8" fill="#FF9A00"/>
+                            <text x="50%" y="87%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-family="Inter" font-size="14" font-weight="600" letter-spacing="4">APEX MOUNTAINS</text>
+                            <text x="50%" y="94%" dominant-baseline="middle" text-anchor="middle" fill="#FF9A00" font-family="Inter" font-size="10" font-weight="400" letter-spacing="2">BRAND IDENTITY</text>
+                        </svg>
+                        <span class="absolute top-4 left-4 bg-brand-ai/20 text-brand-ai font-bold text-[10px] px-2.5 py-1 rounded-full uppercase tracking-wider border border-brand-ai/30">Illustrator</span>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-brand-accent font-bold uppercase tracking-widest">Brending & Logotip</span>
+                        <h3 class="text-xl font-bold mt-1 text-white group-hover:text-brand-accent transition-colors">Apex Mountains Logotipi</h3>
+                        <p class="text-sm text-gray-400 mt-2 line-clamp-2">Zamonaviy brending uchun minimalist va premium oltin-vektorli logotip kontseptsiyasi.</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Card 3 (COREL) -->
+                <div class="portfolio-item corel group relative overflow-hidden rounded-3xl bg-brand-dark border border-white/5 cursor-pointer transform hover:-translate-y-2 transition-all duration-300" onclick="openDetails('billboard')">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-emerald-950 to-green-950 overflow-hidden relative flex items-center justify-center">
+                        <!-- Custom Mockup SVG -->
+                        <svg class="w-full h-full opacity-80 group-hover:scale-105 transition duration-500" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="400" height="300" fill="#041209"/>
+                            <rect x="50" y="80" width="300" height="120" rx="10" stroke="#00A859" stroke-width="4" fill="#05070C"/>
+                            <rect x="180" y="200" width="40" height="70" fill="#222"/>
+                            <rect x="150" y="270" width="100" height="10" rx="3" fill="#222"/>
+                            <text x="50%" y="46%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-family="Syne" font-size="20" font-weight="bold">YASHIL SHAHAR</text>
+                            <text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle" fill="#00A859" font-family="Inter" font-size="10" font-weight="bold">Tashqi Banner Reklamasi</text>
+                        </svg>
+                        <span class="absolute top-4 left-4 bg-brand-corel/20 text-brand-corel font-bold text-[10px] px-2.5 py-1 rounded-full uppercase tracking-wider border border-brand-corel/30">CorelDraw</span>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-brand-accent font-bold uppercase tracking-widest">Tashqi Reklama</span>
+                        <h3 class="text-xl font-bold mt-1 text-white group-hover:text-brand-accent transition-colors">Yashil Shahar Banneri</h3>
+                        <p class="text-sm text-gray-400 mt-2 line-clamp-2">Katta o'lchamli tashqi reklama loyihasi, CorelDraw-da poligrafiya talablariga muvofiq tayyorlangan.</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Card 4 (PS) -->
+                <div class="portfolio-item ps group relative overflow-hidden rounded-3xl bg-brand-dark border border-white/5 cursor-pointer transform hover:-translate-y-2 transition-all duration-300" onclick="openDetails('cosmetic')">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-purple-950 to-pink-950 overflow-hidden relative flex items-center justify-center">
+                        <!-- Custom Mockup SVG -->
+                        <svg class="w-full h-full opacity-80 group-hover:scale-105 transition duration-500" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="400" height="300" fill="#13081A"/>
+                            <rect x="160" y="70" width="80" height="140" rx="8" fill="url(#bottle_grad)"/>
+                            <line x1="160" y1="110" x2="240" y2="110" stroke="#FFF" stroke-width="2" opacity="0.3"/>
+                            <circle cx="200" cy="160" r="15" fill="#FFF" opacity="0.2"/>
+                            <text x="200" y="163" text-anchor="middle" fill="#FFF" font-family="Inter" font-size="10" font-weight="bold" letter-spacing="2">GLOW</text>
+                            <defs>
+                                <linearGradient id="bottle_grad" x1="160" y1="70" x2="240" y2="210" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#EE82EE"/>
+                                    <stop offset="1" stop-color="#8A2BE2"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span class="absolute top-4 left-4 bg-brand-ps/20 text-brand-ps font-bold text-[10px] px-2.5 py-1 rounded-full uppercase tracking-wider border border-brand-ps/30">Photoshop</span>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-brand-accent font-bold uppercase tracking-widest">Qadoq & Reklama</span>
+                        <h3 class="text-xl font-bold mt-1 text-white group-hover:text-brand-accent transition-colors">Glow Kosmetika Kollaji</h3>
+                        <p class="text-sm text-gray-400 mt-2 line-clamp-2">Realistik 3D effekti, nur va soya o'yinlari orqali kosmetika mahsuloti uchun premium sotsial tarmoq post-kollaji.</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Card 5 (AI) -->
+                <div class="portfolio-item ai group relative overflow-hidden rounded-3xl bg-brand-dark border border-white/5 cursor-pointer transform hover:-translate-y-2 transition-all duration-300" onclick="openDetails('illustration')">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-teal-950 to-emerald-950 overflow-hidden relative flex items-center justify-center">
+                        <!-- Custom Mockup SVG -->
+                        <svg class="w-full h-full opacity-80 group-hover:scale-105 transition duration-500" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="400" height="300" fill="#041210"/>
+                            <path d="M100 150 Q150 100 200 150 T300 150" stroke="#00FFC2" stroke-width="4" fill="none"/>
+                            <circle cx="200" cy="150" r="40" fill="none" stroke="#FF00AA" stroke-width="3"/>
+                            <path d="M180 150 L220 150" stroke="#FFF" stroke-width="2"/>
+                            <path d="M200 130 L200 170" stroke="#FFF" stroke-width="2"/>
+                            <text x="50%" y="85%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-family="Syne" font-size="16" font-weight="bold">NEON WAVE ILLUSTRATION</text>
+                        </svg>
+                        <span class="absolute top-4 left-4 bg-brand-ai/20 text-brand-ai font-bold text-[10px] px-2.5 py-1 rounded-full uppercase tracking-wider border border-brand-ai/30">Illustrator</span>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-brand-accent font-bold uppercase tracking-widest">Badiiy Illyustratsiya</span>
+                        <h3 class="text-xl font-bold mt-1 text-white group-hover:text-brand-accent transition-colors">Neon Wave Vektor San'ati</h3>
+                        <p class="text-sm text-gray-400 mt-2 line-clamp-2">100% vektorli murakkab neon mavzusidagi chizmalar, kontsept-art, har qanday kattalikka sifatini yo'qotmaydigan asar.</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Card 6 (COREL) -->
+                <div class="portfolio-item corel group relative overflow-hidden rounded-3xl bg-brand-dark border border-white/5 cursor-pointer transform hover:-translate-y-2 transition-all duration-300" onclick="openDetails('brochure')">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-neutral-900 to-stone-950 overflow-hidden relative flex items-center justify-center">
+                        <!-- Custom Mockup SVG -->
+                        <svg class="w-full h-full opacity-80 group-hover:scale-105 transition duration-500" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="400" height="300" fill="#1A1510"/>
+                            <rect x="70" y="60" width="80" height="180" fill="#0C0D0E" stroke="#444" stroke-width="2"/>
+                            <rect x="160" y="60" width="80" height="180" fill="#0C0D0E" stroke="#444" stroke-width="2"/>
+                            <rect x="250" y="60" width="80" height="180" fill="#0C0D0E" stroke="#444" stroke-width="2"/>
+                            <line x1="80" y1="100" x2="140" y2="100" stroke="#00A859" stroke-width="3"/>
+                            <line x1="80" y1="130" x2="140" y2="130" stroke="#FFF" stroke-width="1" opacity="0.5"/>
+                            <line x1="80" y1="150" x2="120" y2="150" stroke="#FFF" stroke-width="1" opacity="0.5"/>
+                            <text x="50%" y="90%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-family="Inter" font-size="14" font-weight="bold">TRI-FOLD CATALOG</text>
+                        </svg>
+                        <span class="absolute top-4 left-4 bg-brand-corel/20 text-brand-corel font-bold text-[10px] px-2.5 py-1 rounded-full uppercase tracking-wider border border-brand-corel/30">CorelDraw</span>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-brand-accent font-bold uppercase tracking-widest">Poligrafiya Maketlash</span>
+                        <h3 class="text-xl font-bold mt-1 text-white group-hover:text-brand-accent transition-colors">Korporativ 3-Qatlamli Buklet</h3>
+                        <p class="text-sm text-gray-400 mt-2 line-clamp-2">Sanoat poligrafiya asbob-uskunalariga to'liq to'g'ri keladigan (CMYK) mukammal formatlangan buklet fayli.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="xizmatlar" class="py-24 bg-brand-dark/50 border-t border-white/5 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-brand-accent text-sm font-bold uppercase tracking-widest">Nimalar taklif qilaman?</span>
+                <h2 class="font-syne text-3xl sm:text-5xl font-extrabold mt-2">Dizayn Xizmatlari</h2>
+                <p class="text-gray-400 mt-4">Biznesingiz yoki brendingizni vizual jihatdan yuqori darajaga olib chiquvchi premium dizayn xizmatlari</p>
+            </div>
+
+            <!-- Services Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1 -->
+                <div class="bg-brand-dark p-8 rounded-3xl border border-white/5 hover:border-brand-accent/30 transition-all duration-300 relative group overflow-hidden">
+                    <div class="absolute -right-10 -top-10 w-32 h-32 rounded-full bg-brand-accent/5 blur-xl group-hover:bg-brand-accent/10 transition-colors duration-300"></div>
+                    <div class="w-12 h-12 rounded-xl bg-brand-ps/10 text-brand-ps flex items-center justify-center text-xl font-bold mb-6 border border-brand-ps/20">
+                        Ps
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Foto-Manipulyatsiya & Posterlar</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                        Bir nechta suratlarni bitta mukammal asarga birlashtirish, ijtimoiy tarmoqlar uchun premium bannerlar, badiiy posterlar va muqova dizaynlari.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-brand-dark p-8 rounded-3xl border border-white/5 hover:border-brand-accent/30 transition-all duration-300 relative group overflow-hidden">
+                    <div class="absolute -right-10 -top-10 w-32 h-32 rounded-full bg-brand-accent/5 blur-xl group-hover:bg-brand-accent/10 transition-colors duration-300"></div>
+                    <div class="w-12 h-12 rounded-xl bg-brand-ai/10 text-brand-ai flex items-center justify-center text-xl font-bold mb-6 border border-brand-ai/20">
+                        Ai
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Brending & Unikal Logotiplar</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                        Kompaniyangiz qiymatlarini ko'rsatadigan minimalistik va esda qoladigan logotiplar va korporativ brending (brandbook, vizual qonun-qoidalar).
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-brand-dark p-8 rounded-3xl border border-white/5 hover:border-brand-accent/30 transition-all duration-300 relative group overflow-hidden">
+                    <div class="absolute -right-10 -top-10 w-32 h-32 rounded-full bg-brand-accent/5 blur-xl group-hover:bg-brand-accent/10 transition-colors duration-300"></div>
+                    <div class="w-12 h-12 rounded-xl bg-brand-corel/10 text-brand-corel flex items-center justify-center text-xl font-bold mb-6 border border-brand-corel/20">
+                        Cd
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Poligrafiya & Tashqi Reklama</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                        Tashqi do'kon peshlavhalari, katta o'lchamdagi ko'cha bilbordlari, flayerlar, bukletlar, vizitkalar uchun professional va xatosiz chop etish fayllari.
+                    </p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-brand-dark p-8 rounded-3xl border border-white/5 hover:border-brand-accent/30 transition-all duration-300 relative group overflow-hidden">
+                    <div class="absolute -right-10 -top-10 w-32 h-32 rounded-full bg-brand-accent/5 blur-xl group-hover:bg-brand-accent/10 transition-colors duration-300"></div>
+                    <div class="w-12 h-12 rounded-xl bg-brand-accent/10 text-brand-accent flex items-center justify-center text-xl font-bold mb-6 border border-brand-accent/20">
+                        <i class="fa-solid fa-bezier-curve"></i>
+                    </div>
+                    <h3 class="text
